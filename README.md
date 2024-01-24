@@ -26,7 +26,7 @@ This is a basic tutorial on how to make your first M:PN mod.
 
 Making mods with Lua is really easy using Lua for M:PN.
 
-Navigate to your mods directory (if you don't have a mod setup, follow [Swain's overview to making mods](todo)), then make a file called main.lua (it can be anything that ends with .lua, but it's nice to follow a format).
+Navigate to your mods directory (if you don't have a mod setup, follow [Swain's overview to making mods]([todo](https://docs.google.com/document/d/1f_RbQGE45CY8no6mFuVGTaOTF7XnaK7yq5tJXty_JSA/))), then make a file called main.lua (it can be anything that ends with .lua, but it's nice to follow a format).
 
 Inside of this lua follow, paste in the following code:
 ```lua
