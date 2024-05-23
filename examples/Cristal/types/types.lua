@@ -138,14 +138,14 @@ function GetAlertStatus(combatant) end
 ---@param combatant string
 function KillCombatant(combatant) end
 
----Spawns a combatant at a position, and returns it's name and squad name.
+---Spawns a combatant at a position, and returns its name and squad name.
 ---@param combatant string
 ---@param position number[]
 ---@param faction Factions
 ---@return string[]
 function SpawnCombatant(combatant, position, faction) end
 
----Spawns a combatant at a random entrance of the scene, and returns it's name and squad name.
+---Spawns a combatant at a random entrance of the scene, and returns its name and squad name.
 ---@param combatant string
 ---@param faction Factions
 ---@return string[]
@@ -315,7 +315,7 @@ function LoadCustomCloudData() end
 ---Deletes your lua data from steam cloud
 function DeleteCloudData() end
 
----Adds a button to the custom modder UI
+---Adds a button to the Unity canvas
 ---@param name string
 ---@param text string
 ---@param position number[]
@@ -325,7 +325,7 @@ function DeleteCloudData() end
 ---@param color? table[]
 function AddCustomButton(name, text, position, callback, fontName, spriteName, color) end
 
----Changes a field of a custom UI object
+---Changes a field of a Unity UI object
 ---@param name string
 ---@param field string
 ---@param values any[]
@@ -336,17 +336,17 @@ function ChangeCustomUIField(name, field, values) end
 ---@return boolean
 function Exists(name) end
 
----Get's the primary tints of a statcard
+---Gets the primary tints of a statcard
 ---@param combatant string
 ---@return number[][]
 function GetPrimaryColorTints(combatant) end
 
----Get's the secondary tints of a statcard
+---Gets the secondary tints of a statcard
 ---@param combatant string
 ---@return number[][]
 function GetSecondaryColorTints(combatant) end
 
----Create's a custom text object on the Untiy UI
+---Creates text on the Unity UI
 ---@param name string
 ---@param text string
 ---@param position number[]
@@ -355,28 +355,79 @@ function GetSecondaryColorTints(combatant) end
 ---@param fontName? string
 function AddCustomText(name, text, position, color, fontSize, fontName) end
 
----Create's a custom image object on the Untiy UI
+---Creates an image on the Unity UI
 ---@param name string
 ---@param textureName string
 ---@param position number[]
 ---@param color? number[]
 function AddCustomImage(name, textureName, position, color) end
 
---Play an animation clip as an emote
+--Plays an animation clip as an emote
 ---@param combatant string
 ---@param animName string
 function PlayAnimAsEmote(combatant, animName) end
 
----Sets the parent of a object
+---Sets the parent of an object
 ---@param name string
 ---@param parentName string
 function SetParent(name, parentName) end
 
----Gets the parent of a object
+---Gets the parent of an object
 ---@param name string
 ---@return string
 function GetParent(name) end
 
+--Creates an empty game object
+---@param name string
+---@param position number[]
+function CreateEmpty(name, position) end
+
+--Spawns a particle effect at a position
+---@param name string
+---@param position number[]
+function SpawnParticle(name, position) end
+
+--Gets all file paths in a directory
+---@param directory string
+---@return string[]
+function GetAllFilesFromDirectory(directory) end
+
+--Loads a WAV file into the internal AudioClips list from a path dynamically
+---@param fileName string
+function LoadWAV(fileName) end
+
+--Removes all audio from the internal AudioClips list
+function UnloadAllAudio() end
+
+--Reads a file at a path and returns the contents of it
+---@param path string
+---@return string
+function ReadFile(path) end
+
+--Creates a directory at a path
+---@param name string
+---@param path string
+function CreateDirectory(name, path) end
+
+--Creates a file at a path
+---@param name string
+---@param path string
+function CreateFile(name, path) end
+
+--Writes to a file at a path
+---@param path string
+---@param text string
+function WriteToFile(path, text) end
+
+--Checks if a file exists at a path
+---@param path string
+---@return boolean
+function FileExists(path) end
+
+--Checks if a directory exists at a path
+---@param path string
+---@return boolean
+function DirectoryExists(path) end
 
 ---Basic callback function. It is called whenever a certain callback happens (ex. death, weapon)
 ---@param name string
@@ -388,7 +439,8 @@ function Callback(name, parameters) end
 function OnSceneLoaded(name) end
 
 ---Runs every frame.
-function OnUpdate() end
+---@param deltaTime number
+function OnUpdate(deltaTime) end
 
 ---@type string
 ---The gameObject name of the player (READONLY).
@@ -401,3 +453,7 @@ deltaTime = 0
 ---@type number
 ---The rate at which time passes (READONLY).
 timeScale = 1
+
+--@type string
+-- The persistent data path (READONLY).
+persistentDataPath = ""
