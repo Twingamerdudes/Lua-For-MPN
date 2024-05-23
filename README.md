@@ -14,17 +14,17 @@ List of prominent features:
 * Squad combatant control
 * Audio support w/ FMOD
 * Audio support w/o FMOD
-* And many, many global functions for you to use.
+* And many, many other features for you to use.
 
 # Setup
 Get the DLL files from the releases section. Then drag and drop them into (M:PN's directory)/Madness Project Nexus_Data/Managed folder.
 
-That's it, it really is that simple.
+That's it, it is that simple.
 
 # Making your first Lua for M:PN mod
 This is a basic tutorial on how to make your first M:PN mod.
 
-Making mods with Lua is really easy using Lua for M:PN.
+Making mods with Lua is easy using Lua for M:PN.
 
 Navigate to your mods directory (if you don't have a mod setup, follow [Swain's overview to making mods](https://docs.google.com/document/d/1f_RbQGE45CY8no6mFuVGTaOTF7XnaK7yq5tJXty_JSA/)), then make a file called main.lua (it can be anything that ends with .lua, but it's nice to follow a format).
 
@@ -41,6 +41,6 @@ end
 
 To test out this code, boot up the game and load into a scene that has a combatant in it (The notice function does not work within the main menu)
 
-All this code does is output the loaded scene's name to the game's notice menu. Not too much.
+This code outputs the loaded scene's name to the game's notice menu. Not too much.
 
-But as you learn Lua for M:PN, you will be able to do more and more complex things.
+But as you learn Lua for M:PN, you will be able to do more complex things.
