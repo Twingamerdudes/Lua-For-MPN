@@ -1,0 +1,10 @@
+{
+  "Name": "Cristal",
+  "Description": "CERVEZA CRISTAL!1!1!1!1",
+  "Author": "Twingamerdudes",
+  "Tags": [
+    "Cristal",
+    "Meme",
+    "Shit Post"
+  ]
+}

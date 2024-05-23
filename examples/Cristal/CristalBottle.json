@@ -1,0 +1,14 @@
+{
+  "Melee": [
+    {
+      "Filename": "Cristal",
+      "Root": "M_Bottle",
+      "Name": "Cerveza Cristal",
+      "NameShort": "Cristal",
+      "Description": "Cristal, unique, great and ours",
+      "ObjRef": "Cristal",
+      "MeleeAmmo": -1,
+      "MeleeDamage": 6.0
+    }
+  ]
+}
