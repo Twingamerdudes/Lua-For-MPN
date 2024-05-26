@@ -17,7 +17,7 @@ List of prominent features:
 * And many, many other features for you to use.
 
 # Setup
-Get the DLL files from the releases section. Then drag and drop them into (M:PN's directory)/Madness Project Nexus_Data/Managed folder.
+Get the DLL files from the [releases](https://github.com/Twingamerdudes/Lua-For-MPN/releases) section. Then drag and drop them into (M:PN's directory)/Madness Project Nexus_Data/Managed folder.
 
 That's it, it is that simple.
 
