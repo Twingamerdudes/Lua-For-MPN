@@ -28,16 +28,16 @@ function Callback(name, args)
         end
     end
 end
-function OnUpdate()
+function OnUpdate(dt)
     if cristalAnimation then
         if currentScale[1] <= 3 then
-            currentScale[1] = currentScale[1] + 0.4 * deltaTime
-            currentScale[2] = currentScale[2] + 0.4 * deltaTime
-            opacity = opacity + 150 * deltaTime
+            currentScale[1] = currentScale[1] + 0.4 * dt
+            currentScale[2] = currentScale[2] + 0.4 * dt
+            opacity = opacity + 150 * dt
             ChangeCustomUIField("CristalImage", "scale", {{currentScale[1], currentScale[2]}})
             ChangeCustomUIField("CristalImage", "color", {{255, 255, 255, opacity}})
         elseif fade then
-            opacity = opacity - 150 * deltaTime
+            opacity = opacity - 150 * dt
             ChangeCustomUIField("CristalImage", "color", {{255, 255, 255, opacity}})
             if opacity <= 0 then
                 cristalAnimation = false
